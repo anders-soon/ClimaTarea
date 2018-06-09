@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ElClimaUDEO.View.WeatherPage">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <Label Text="Información del clima" BackgroundColor="Blue" FontSize="20" HorizontalTextAlignment="Center"></Label>
+            <Image Source="mundo.png"  WidthRequest="64" HeightRequest="64" HorizontalOptions="Center"></Image>
+            <SearchBar FontSize="15" 
+                Placeholder="Inserte País" x:Name="pais"  HeightRequest="40"
+                Text="{Binding SearchTerm}"
+                SearchCommand="{Binding SearchCommand}"></SearchBar>
+            <Label Text="{Binding Location}"
+                   ></Label>
+            <Label Text="{Binding Condition}"
+                   ></Label>
+            <Image WidthRequest="100"
+                   HeightRequest="100"
+                   Source="{Binding WeatherImage}"></Image>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
